@@ -7,11 +7,6 @@ using System.Threading.Tasks;
 
 namespace PathfinderJson
 {
-    [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = true)]
-    public class FieldDefinedAttribute : Attribute
-    {
-    }
-
 
     [AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = true)]
     public class FieldAttribute : Attribute

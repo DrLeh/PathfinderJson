@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Attributes.cs" />
     <Compile Include="CharacterSheet.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="FieldReader.cs" />
     <Compile Include="ObjectMaterializer.cs" />
     <Compile Include="Program.cs" />

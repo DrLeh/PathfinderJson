@@ -36,8 +36,15 @@ namespace PathfinderJson
                 var method = reader.GetType().GetMethod($"{nameof(FieldReader.GetField)}");
                 var generic = method.MakeGenericMethod(prop.PropertyType);
 
-                var value = generic.Invoke(reader, new[] { fieldName });
-                prop.SetValue(obj, value);
+                try
+                {
+                    var value = generic.Invoke(reader, new[] { fieldName });
+                    prop.SetValue(obj, value);
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine(fieldName);
+                }
             }
         }
     }
